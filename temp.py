@@ -159,7 +159,7 @@ def train(expression,networks):
         results = [abs(float(eval(expression))-i) for i in output]
         copy_results = list(results)
         copy_children = list(children)
-        
+        print(i,end='\r')
         if abs(min(copy_results)) < stop_range:
             return [copy_children[copy_results.index(min(copy_results))]]
                 
